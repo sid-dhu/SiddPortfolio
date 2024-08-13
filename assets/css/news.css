@@ -1,0 +1,230 @@
+
+.newspaper-container {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%);
+    background-color: #f5f5f5;
+    padding: 50px;
+    max-width: 800px;
+    transform: translate(20%, 0%);
+    margin: auto;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .newspaper-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(202, 202, 202, 0.1));
+    pointer-events: none;
+  }
+
+  
+  
+  .newspaper-header {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px;
+  }
+
+  
+  .newspaper-title {
+    font-size: 58px;
+    font-family: 'MedievalSharp', serif;
+    font-weight: bold;
+  }
+
+  .newspaper-headline {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: left;
+    
+  }
+  
+  .newspaper-subtitle, .newspaper-details {
+    line-height: 1.5;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .newspaper-content {
+    margin-top: 20px;
+  }
+  
+  .article {
+    margin-bottom: 40px;
+  }
+  
+  .article-image {
+    max-width: 45%;
+    height: auto;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+  }
+
+  /* Hover animations */
+.article-image:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.article-image:hover img {
+    opacity: 0.8;
+}
+  
+  .article-image.left {
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .article-image.right {
+    float: right;
+    margin-left: 20px;
+  }
+  
+  .article-text {
+    overflow: hidden;
+  }
+  
+  .headline {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+  }
+
+  /* Hover animations */
+    .headline:hover {
+      transform: scale(1.01);
+      z-index: 2;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .headline:hover {
+      opacity: 0.8;
+    }
+  
+  .excerpt {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+  }
+
+  .excerpt1 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+  }
+
+  /* Hover animations */
+   .excerpt:hover {
+      transform: scale(1.01);
+      z-index: 2;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .excerpt:hover img {
+      opacity: 0.8;
+    }
+  
+  .line-placeholder {
+    background-color: #b6b6b6;
+    height: 10px;
+    margin: 5px 0;
+    border-radius: 2px;
+  }
+
+     /* Hover animations */
+   .line-placeholder:hover {
+    transform: scale(1.01);
+    z-index: 2;
+  }
+
+  .line-placeholder:hover img {
+    opacity: 0.8;
+  }
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .newspaper-container {
+        max-width: 95%;
+        transform: translate(3%, 0%);
+    }
+}
+
+@media (max-width: 992px) {
+    .newspaper-title, .newspaper-headline {
+        font-size: 45px;
+    }
+    .headline {
+        font-size: 20px;
+    }
+    .excerpt {
+        font-size: 14px;
+    }
+
+    .excerpt1 {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+    .newspaper-container {
+        padding: 15px;
+    }
+    .article-image.left,
+    .article-image.right {
+        float: none;
+        margin: 0;
+        display: block;
+        max-width: 80%;
+        padding-left: 25%;
+        padding-bottom: 10px;
+        padding-top: -20px;
+    }
+    .newspaper-title, .newspaper-headline {
+        font-size: 37px;
+    }
+    .headline {
+        font-size: 18px;
+    }
+    .excerpt {
+        font-size: 13px;
+    }
+
+    .excerpt1 {
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+    .newspaper-container {
+        padding: 10px;
+    }
+    .newspaper-title, .newspaper-headline {
+        font-size: 30px;
+    }
+    .headline {
+        font-size: 16px;
+    }
+    .excerpt {
+        font-size: 12px;
+    }
+
+    .excerpt1 {
+      font-size: 12px;
+  }
+}
+  
