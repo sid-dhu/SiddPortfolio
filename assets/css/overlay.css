@@ -1,0 +1,78 @@
+/* Ensure box-sizing is consistent */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Main content styles for demo purposes */
+  .content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 1500px; /* Add height to create scrollable content */
+  }
+  
+  /* Overlay styles */
+  .overlay {
+    position: fixed;
+    left: 0; /* Fix it to the left edge, no gap */
+    top: 50%; /* Position it at 50% of the viewport height */
+    transform: translateY(-50%); /* Center it vertically */
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 0;
+    margin: 0;
+    
+    /* Fade-in animation when page loads */
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards; /* Fade in over 2 seconds */
+    
+  }
+  
+  /* Image in overlay */
+  .overlay img {
+    display: block;
+    width: 450px; /* Double size for larger screens */
+    height: auto;
+    max-width: 100%; /* Ensure the image doesn’t stretch beyond its container */
+    border-radius: 0 10px 10px 0; /* Smooth right corners */
+    
+    transition: transform 0.5s ease; /* Transition for hover animation */
+  }
+  
+  /* Hover animation (enlarge image slightly) */
+  .overlay img:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+  }
+  
+  /* Fade-in Keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+ 
+  
+  /* Responsive design for tablets (reduce size) */
+  @media (max-width: 1024px) {
+    .overlay img {
+      width: 300px; /* Smaller width for medium screens (tablets) */
+    }
+  }
+  
+  /* Responsive design for mobile devices (further reduce size) */
+  @media (max-width: 768px) {
+    .overlay img {
+      width: 200px; /* Adjust to smaller width on mobile devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlay img {
+      width: 150px; /* Further reduce size for small mobile devices */
+    }
+  }
+  
